@@ -1,14 +1,21 @@
 .container {
     max-width: 120rem; //1200px
     margin: 8rem auto;
-    background-color: var(--color-grey--light-1);
+    background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
+
+    height: 50rem;
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey--light-2);
+    border-bottom: var(--color-grey-light-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
@@ -16,7 +23,7 @@
 }
 
 .sidebar {
-    background-color: var(--color-grey--dark-1);
+    background-color: var(--color-grey-dark-1);
     flex: 0 0 18%;
 }
 

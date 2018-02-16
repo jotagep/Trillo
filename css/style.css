@@ -189,20 +189,23 @@ body {
   .user-nav > * {
     padding: 0 2rem;
     cursor: pointer;
-    transition: all .2s;
     align-self: stretch;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    transition: all .2s; }
   .user-nav > *:hover {
     background-color: var(--color-grey-light-2); }
   .user-nav__icon-box {
     display: flex;
     align-items: center;
     position: relative; }
+  .user-nav__icon-box:hover .user-nav__icon {
+    fill: var(--color-grey-dark-2); }
   .user-nav__icon {
     width: 2.25rem;
     height: 2.25rem;
-    fill: var(--color-grey-dark-2); }
+    fill: var(--color-grey-light-4);
+    transition: all .2s; }
   .user-nav__notification {
     font-size: .8rem;
     height: 1.75rem;
@@ -295,9 +298,31 @@ body {
 
 .gallery {
   display: flex; }
+  .gallery__item {
+    position: relative;
+    overflow: hidden; }
+  .gallery__item:hover .gallery__photo {
+    transform: translateY(-2.5rem); }
   .gallery__photo {
     display: block;
-    width: 100%; }
+    width: 100%;
+    transition: all .4s; }
+  .gallery__item:hover .gallery__caption {
+    transform: translateY(0); }
+  .gallery__caption {
+    position: absolute;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    transform: translateY(100%);
+    transition: all .4s; }
+    .gallery__caption p {
+      font-size: 1.5rem;
+      color: #fff; }
 
 .overview {
   display: flex;
